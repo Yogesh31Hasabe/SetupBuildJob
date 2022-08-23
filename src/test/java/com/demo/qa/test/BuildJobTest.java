@@ -11,31 +11,35 @@ import org.testng.annotations.Test;
 
 
 public class BuildJobTest {
-	WebDriver driver;
+// 	WebDriver driver;
 	
-	@BeforeMethod
-	public void setUp()
-	{
-		System.setProperty("webdriver.chrome.driver", "D:\\Softwares\\chromedriver.exe");
-		driver=new ChromeDriver();
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //Implicit wait
-		driver.get("https://demoqa.com/");
-	}
+// 	@BeforeMethod
+// 	public void setUp()
+// 	{
+// 		System.setProperty("webdriver.chrome.driver", "D:\\Softwares\\chromedriver.exe");
+// 		driver=new ChromeDriver();
+// 		driver.manage().window().maximize();
+// 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS); //Implicit wait
+// 		driver.get("https://demoqa.com/");
+// 	}
 	
-	@Test
-	public void ToolsQaTest()
-	{
-		driver.findElement(By.xpath("(//div[@class=\"card-up\"])[1]")).click();
-		String expectedtext="Elements";
-		String actualtext=driver.findElement(By.xpath("(//div[contains(text(),\"Elements\")])[1]")).getText();
-		Assert.assertEquals(expectedtext, actualtext, "Message is not Displaying as expected");
-	}
+// 	@Test
+// 	public void ToolsQaTest()
+// 	{
+// 		driver.findElement(By.xpath("(//div[@class=\"card-up\"])[1]")).click();
+// 		String expectedtext="Elements";
+// 		String actualtext=driver.findElement(By.xpath("(//div[contains(text(),\"Elements\")])[1]")).getText();
+// 		Assert.assertEquals(expectedtext, actualtext, "Message is not Displaying as expected");
+// 	}
 	
-	@AfterMethod
-	public void tearDown()
-	{
-		driver.close();
-	}
+// 	@AfterMethod
+// 	public void tearDown()
+// 	{
+// 		driver.close();
+// 	}
 
+	public static void main(String args[])
+	{
+		System.out.println("Hello It's Working");
+	}
 }
